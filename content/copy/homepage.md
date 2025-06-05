@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 # Unicorn of One - Homepage Content
+=======
+# Unicorn of One - Homepage Copy
+>>>>>>> Stashed changes
 
 ## Hero Section
 
@@ -6,12 +10,17 @@
 One Person. One Vision. $1 Billion Impact.
 
 ### Subheadline
+<<<<<<< Updated upstream
 Build a unicorn-level business without building a unicorn-sized team. Master radical focus and AI leverage to achieve what others say is impossible.
+=======
+Build a billion-dollar business with radical focus methodology and AI leverage—no massive team required.
+>>>>>>> Stashed changes
 
 ### Hero CTA
 Request Your Unicorn Strategy Session
 
 ### Supporting Text
+<<<<<<< Updated upstream
 Join 1,000+ solo founders scaling beyond traditional limits
 
 ---
@@ -240,3 +249,172 @@ Stop building a team. Start building a unicorn.
 ---
 
 *Unicorn of One is part of the Utlyze "Of One" suite - empowering solo professionals everywhere.*
+=======
+Join the elite founders who've discovered how to achieve exponential growth through hyper-focus and AI-powered scaling strategies.
+
+---
+
+## Pain Points Section
+
+### Section Title
+The World Says You Need a World-Sized Team
+
+### Pain Points
+
+#### 1. World-Changing Idea, No World-Sized Team
+**Headline:** Your Vision Is Massive. Your Team Isn't.
+**Description:** You see the billion-dollar opportunity clearly. But everyone says you need 100+ employees to capture it. They're wrong.
+
+#### 2. Traditional Wisdom Holds You Back
+**Headline:** "You Can't Do It Alone" Is Yesterday's Advice
+**Description:** Conventional startup wisdom was written before AI could multiply your capabilities 1000x. It's time for new rules.
+
+#### 3. Burning Out Before Breaking Through
+**Headline:** Working Harder Isn't Working
+**Description:** You're grinding 80-hour weeks but moving at 10% speed. The problem isn't your effort—it's your approach.
+
+#### 4. Focus Scattered Across Too Many Priorities
+**Headline:** Everything Feels Important. Nothing Gets Done.
+**Description:** You're juggling product, marketing, sales, operations... and dropping balls daily. There's a better way.
+
+---
+
+## Solution Section
+
+### Section Title
+The Unicorn of One Method™
+
+### Core Methodology
+**Radical Focus + AI Leverage = Exponential Growth**
+
+Transform your solo operation into a billion-dollar machine through our proven three-pillar system:
+
+1. **Ruthless Prioritization Framework**
+   - Identify your single 10x lever
+   - Eliminate 90% of "important" tasks
+   - Focus only on exponential opportunities
+
+2. **AI Multiplication System**
+   - Deploy AI agents for 24/7 productivity
+   - Automate everything except genius work
+   - Scale your best thinking infinitely
+
+3. **Exponential Execution Playbook**
+   - Weekly sprints that move mountains
+   - Decision frameworks that save months
+   - Growth hacks that compound daily
+
+---
+
+## Features Section
+
+### Section Title
+Your Unicorn Toolkit
+
+#### Exponential Productivity Systems
+- **10x Task Prioritization Matrix**: Know exactly what to work on every single day
+- **AI Agent Army Setup**: Your personal workforce that never sleeps
+- **Focus Protection Protocols**: Eliminate distractions permanently
+
+#### AI-Powered Scaling Strategies
+- **Content Generation at Scale**: Produce 100x more without burning out
+- **Automated Customer Intelligence**: Know your market better than they know themselves
+- **Smart Process Automation**: Turn repetitive work into one-click operations
+
+#### Focus on 10x Opportunities Only
+- **Opportunity Scoring Algorithm**: Instantly identify what's worth your time
+- **Strategic No Framework**: Say no to good to say yes to great
+- **Lever Analysis Tools**: Find your highest-impact activities
+
+#### Elite Founder Community Access
+- **Weekly Mastermind Calls**: Learn from other solo unicorns
+- **24/7 Slack Community**: Get answers when you need them
+- **Monthly Strategy Sessions**: Direct access to proven advisors
+
+---
+
+## Social Proof Section
+
+### Section Title
+Solo Founders. Billion-Dollar Outcomes.
+
+### Testimonials
+
+#### Sarah Chen - Founder, AutomateIQ
+"In 18 months, I went from solo founder to $2.3M ARR. The Unicorn of One method showed me how to leverage AI to build what usually takes a team of 20."
+
+#### Marcus Rodriguez - CEO, DataPulse
+"I was drowning in tasks until I discovered radical focus. Now I work 40 hours/week and grow 30% monthly. This isn't just theory—it's a complete system."
+
+#### Priya Patel - Founder, CloudScale
+"The AI multiplication strategies alone 10x'd my output. I'm competing with funded startups while staying lean and profitable."
+
+---
+
+## How It Works Section
+
+### Section Title
+Your Path to Billion-Dollar Impact
+
+### Step 1: Strategy Session
+**Headline:** Map Your Unicorn Path
+**Description:** In a focused 90-minute session, we'll identify your highest-leverage opportunities and create your personalized scaling roadmap.
+
+### Step 2: System Implementation
+**Headline:** Deploy Your AI Army
+**Description:** Get instant access to our proven templates, AI prompts, and automation blueprints. Start multiplying your impact from day one.
+
+### Step 3: Exponential Execution
+**Headline:** Scale Without Limits
+**Description:** Follow our weekly sprint system to maintain laser focus while your AI infrastructure handles the rest. Watch your metrics go exponential.
+
+---
+
+## FAQ Section
+
+### Frequently Asked Questions
+
+#### Q: Is this only for tech startups?
+A: Not at all. The Unicorn of One Method works for any ambitious business that can leverage technology. We have members in SaaS, e-commerce, consulting, education, and more.
+
+#### Q: How much time do I need to invest?
+A: The initial setup takes about 10 hours spread over 2 weeks. After that, you'll actually work fewer hours while achieving more.
+
+#### Q: What if I'm not technical?
+A: Perfect. Our AI tools are designed for non-technical founders. If you can write an email, you can deploy our systems.
+
+#### Q: How is this different from other productivity programs?
+A: We don't teach generic productivity. This is a complete business scaling system designed specifically for solo founders targeting massive outcomes.
+
+#### Q: What's included in the strategy session?
+A: You'll receive a personalized scaling roadmap, AI toolkit recommendations, and a 90-day execution plan tailored to your specific business.
+
+---
+
+## Final CTA Section
+
+### Headline
+Ready to Build Your Billion-Dollar Business?
+
+### Subheadline
+Limited strategy sessions available. Only for founders serious about exponential growth.
+
+### CTA Button
+Request Your Unicorn Strategy Session
+
+### Urgency Text
+We work with only 10 new founders per month to ensure quality. Sessions for this month are 70% booked.
+
+### Trust Elements
+- 🔒 100% Confidential
+- ⚡ Results in 90 Days
+- 🎯 Personalized Strategy
+- 💰 ROI Guaranteed
+
+---
+
+## Footer Value Proposition
+**Unicorn of One**: Where solo founders build billion-dollar futures.
+
+Part of the Utlyze "Of One" suite - empowering solo professionals everywhere. 
+>>>>>>> Stashed changes

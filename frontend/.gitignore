@@ -3,8 +3,17 @@
 # dependencies
 /node_modules
 /.pnp
+<<<<<<< Updated upstream
 .pnp.js
 .yarn/install-state.gz
+=======
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+>>>>>>> Stashed changes
 
 # testing
 /coverage
@@ -24,13 +33,24 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< Updated upstream
 
 # local env files
 .env*.local
+=======
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+>>>>>>> Stashed changes
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+<<<<<<< Updated upstream
 next-env.d.ts
+=======
+next-env.d.ts
+>>>>>>> Stashed changes
