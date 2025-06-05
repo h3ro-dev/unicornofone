@@ -1,0 +1,20 @@
+{
+  "name": "unicornofone",
+  "version": "1.0.0",
+  "description": "Build a billion-dollar business with a team of one",
+  "scripts": {
+    "orchestrate": "node scripts/agent-orchestrator.js",
+    "background": "echo \"Background agent started with prompt:\" && echo $CURSOR_BACKGROUND_AGENT_PROMPT",
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+  },
+  "keywords": [
+    "unicorn",
+    "of",
+    "one"
+  ],
+  "author": "Utlyze",
+  "license": "MIT"
+}
