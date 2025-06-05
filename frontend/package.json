@@ -1,0 +1,38 @@
+{
+  "name": "unicornofone-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend for Unicorn of One - Build a billion-dollar business with a team of one",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "unicorn",
+    "startup",
+    "solopreneur",
+    "ai",
+    "productivity"
+  ],
+  "author": "Utlyze",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^15.3.3",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.7.3"
+  }
+}
