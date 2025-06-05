@@ -2,11 +2,17 @@ import express, { Express, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
+
+// Import database connection
+import { testDatabaseConnection } from '../config/database';
 
 // Import routers
 import healthRouter from '../routes/health';
 import apiRouter from '../routes/api';
+import authRouter from '../routes/auth';
+import usersRouter from '../routes/users';
 
 // Load environment variables
 dotenv.config();
@@ -33,6 +39,9 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+// Cookie parser middleware
+app.use(cookieParser());
+
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -40,6 +49,16 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later.'
 });
 app.use('/api/', limiter);
+
+// Auth-specific rate limiting (stricter)
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // limit each IP to 5 requests per windowMs
+  message: 'Too many authentication attempts, please try again later.',
+  skipSuccessfulRequests: true,
+});
+app.use('/auth/login', authLimiter);
+app.use('/auth/register', authLimiter);
 
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
@@ -55,7 +74,9 @@ if (isDevelopment) {
 
 // Routes
 app.use('/health', healthRouter);
+app.use('/auth', authRouter);
 app.use('/api', apiRouter);
+app.use('/api/users', usersRouter);
 
 // Root endpoint
 app.get('/', (req: Request, res: Response) => {
@@ -64,7 +85,9 @@ app.get('/', (req: Request, res: Response) => {
     version: '1.0.0',
     endpoints: {
       health: '/health',
-      api: '/api'
+      auth: '/auth',
+      api: '/api',
+      users: '/api/users'
     }
   });
 });
@@ -91,13 +114,33 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-// Start server (only if not in Vercel environment)
-if (process.env.VERCEL !== '1') {
-  app.listen(PORT, () => {
-    console.log(`🚀 Unicorn of One API running on port ${PORT}`);
-    console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-  });
+// Initialize database connection and start server
+async function startServer() {
+  try {
+    // Test database connection
+    const dbConnected = await testDatabaseConnection();
+    
+    if (!dbConnected && process.env.NODE_ENV === 'production') {
+      console.error('❌ Failed to connect to database. Exiting...');
+      process.exit(1);
+    }
+    
+    // Start server (only if not in Vercel environment)
+    if (process.env.VERCEL !== '1') {
+      app.listen(PORT, () => {
+        console.log(`🚀 Unicorn of One API running on port ${PORT}`);
+        console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+        console.log(`📊 Database: ${dbConnected ? 'Connected' : 'Not connected'}`);
+      });
+    }
+  } catch (error) {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  }
 }
+
+// Start the server
+startServer();
 
 // Export for Vercel
 export default app;
