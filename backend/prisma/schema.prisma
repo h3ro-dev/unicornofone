@@ -1,0 +1,162 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication and profile
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  password        String
+  name            String?
+  avatar          String?
+  role            Role      @default(USER)
+  emailVerified   Boolean   @default(false)
+  isActive        Boolean   @default(true)
+  
+  // Profile information
+  company         String?
+  position        String?
+  phone           String?
+  website         String?
+  bio             String?
+  
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  lastLoginAt     DateTime?
+  
+  // Relations
+  refreshTokens   RefreshToken[]
+  leads           Lead[]
+  consultations   Consultation[]
+  
+  @@index([email])
+  @@index([createdAt])
+}
+
+// Refresh token for JWT authentication
+model RefreshToken {
+  id          String   @id @default(cuid())
+  token       String   @unique
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+  
+  @@index([token])
+  @@index([userId])
+}
+
+// Lead model for capturing potential customers
+model Lead {
+  id              String    @id @default(cuid())
+  email           String
+  name            String
+  company         String?
+  phone           String?
+  source          String?   // e.g., "landing_page", "referral", "social_media"
+  status          LeadStatus @default(NEW)
+  
+  // Additional information
+  message         String?
+  interests       String[]  // Array of interests/services
+  budget          String?
+  timeline        String?
+  
+  // Relations
+  userId          String?   // Optional: linked to a user if they register
+  user            User?     @relation(fields: [userId], references: [id])
+  consultations   Consultation[]
+  
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  convertedAt     DateTime? // When lead became a customer
+  
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// Consultation model for booking meetings
+model Consultation {
+  id              String    @id @default(cuid())
+  leadId          String
+  lead            Lead      @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  userId          String?
+  user            User?     @relation(fields: [userId], references: [id])
+  
+  // Scheduling
+  scheduledAt     DateTime
+  duration        Int       @default(30) // Duration in minutes
+  timezone        String    @default("UTC")
+  meetingLink     String?   // Zoom/Google Meet link
+  
+  // Details
+  type            ConsultationType
+  topic           String
+  description     String?
+  status          ConsultationStatus @default(SCHEDULED)
+  
+  // Notes and outcomes
+  notes           String?
+  outcome         String?
+  followUpDate    DateTime?
+  
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+  
+  @@index([scheduledAt])
+  @@index([status])
+  @@index([leadId])
+  @@index([userId])
+}
+
+// Enums
+enum Role {
+  USER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  UNQUALIFIED
+  CONVERTED
+  LOST
+}
+
+enum ConsultationType {
+  DISCOVERY       // Initial discovery call
+  STRATEGY        // Strategy session
+  TECHNICAL       // Technical consultation
+  SALES           // Sales discussion
+  FOLLOWUP        // Follow-up meeting
+  OTHER
+}
+
+enum ConsultationStatus {
+  SCHEDULED
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+  RESCHEDULED
+}

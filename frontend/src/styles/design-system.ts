@@ -1,4 +1,5 @@
 /**
+<<<<<<< Updated upstream
  * Unicorn of One - Design System
  * 
  * This file contains all design tokens for the Unicorn of One project.
@@ -89,12 +90,116 @@ export const typography = {
     lg: '1.125rem',    // 18px
     xl: '1.25rem',     // 20px
     '2xl': '1.5rem',   // 24px
+=======
+ * Unicorn of One Design System
+ * 
+ * A clean, professional, and trustworthy design system for ambitious founders
+ * aiming for massive scale without massive teams.
+ */
+
+export const colors = {
+  // Primary Colors
+  primary: {
+    50: '#E6ECFA',
+    100: '#C2D0F2',
+    200: '#9BB2EA',
+    300: '#7494E1',
+    400: '#577DD9',
+    500: '#4169E1', // Utlyze Blue - Primary brand color
+    600: '#3A5FCD',
+    700: '#3254B9',
+    800: '#2A47A5',
+    900: '#1E3691',
+  },
+  
+  // Accent Colors
+  accent: {
+    50: '#F5EBF9',
+    100: '#E6CCF0',
+    200: '#D5AAE6',
+    300: '#C488DC',
+    400: '#B76FD3',
+    500: '#8E44AD', // Purple accent
+    600: '#803DA0',
+    700: '#723693',
+    800: '#642F86',
+    900: '#562779',
+  },
+  
+  // Neutral Colors
+  neutral: {
+    50: '#FAFAFA',
+    100: '#F5F5F5',
+    200: '#E5E5E5',
+    300: '#D4D4D4',
+    400: '#A3A3A3',
+    500: '#737373',
+    600: '#525252',
+    700: '#404040',
+    800: '#262626',
+    900: '#171717',
+  },
+  
+  // Semantic Colors
+  success: {
+    50: '#F0FDF4',
+    500: '#22C55E',
+    700: '#15803D',
+  },
+  
+  warning: {
+    50: '#FFFBEB',
+    500: '#F59E0B',
+    700: '#B45309',
+  },
+  
+  error: {
+    50: '#FEF2F2',
+    500: '#EF4444',
+    700: '#B91C1C',
+  },
+  
+  info: {
+    50: '#F0F9FF',
+    500: '#3B82F6',
+    700: '#1D4ED8',
+  },
+  
+  // Background & Surface
+  background: {
+    primary: '#FFFFFF',
+    secondary: '#FAFAFA',
+    tertiary: '#F5F5F5',
+  },
+};
+
+export const typography = {
+  // Font Families
+  fontFamily: {
+    sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+    mono: ['Fira Code', 'Monaco', 'Consolas', 'monospace'],
+  },
+  
+  // Font Sizes
+  fontSize: {
+    xs: '0.75rem',    // 12px
+    sm: '0.875rem',   // 14px
+    base: '1rem',     // 16px
+    lg: '1.125rem',   // 18px
+    xl: '1.25rem',    // 20px
+    '2xl': '1.5rem',  // 24px
+>>>>>>> Stashed changes
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem',  // 36px
     '5xl': '3rem',     // 48px
     '6xl': '3.75rem',  // 60px
     '7xl': '4.5rem',   // 72px
   },
+<<<<<<< Updated upstream
+=======
+  
+  // Font Weights
+>>>>>>> Stashed changes
   fontWeight: {
     light: 300,
     normal: 400,
@@ -103,13 +208,21 @@ export const typography = {
     bold: 700,
     extrabold: 800,
   },
+<<<<<<< Updated upstream
   lineHeight: {
+=======
+  
+  // Line Heights
+  lineHeight: {
+    none: 1,
+>>>>>>> Stashed changes
     tight: 1.25,
     snug: 1.375,
     normal: 1.5,
     relaxed: 1.625,
     loose: 2,
   },
+<<<<<<< Updated upstream
   letterSpacing: {
     tight: '-0.05em',
     normal: '0',
@@ -227,6 +340,90 @@ export const gradients = {
 // =================================================================
 // BREAKPOINTS
 // =================================================================
+=======
+  
+  // Letter Spacing
+  letterSpacing: {
+    tighter: '-0.05em',
+    tight: '-0.025em',
+    normal: '0',
+    wide: '0.025em',
+    wider: '0.05em',
+    widest: '0.1em',
+  },
+};
+
+export const spacing = {
+  0: '0',
+  px: '1px',
+  0.5: '0.125rem',  // 2px
+  1: '0.25rem',     // 4px
+  1.5: '0.375rem',  // 6px
+  2: '0.5rem',      // 8px
+  2.5: '0.625rem',  // 10px
+  3: '0.75rem',     // 12px
+  3.5: '0.875rem',  // 14px
+  4: '1rem',        // 16px
+  5: '1.25rem',     // 20px
+  6: '1.5rem',      // 24px
+  7: '1.75rem',     // 28px
+  8: '2rem',        // 32px
+  9: '2.25rem',     // 36px
+  10: '2.5rem',     // 40px
+  11: '2.75rem',    // 44px
+  12: '3rem',       // 48px
+  14: '3.5rem',     // 56px
+  16: '4rem',       // 64px
+  20: '5rem',       // 80px
+  24: '6rem',       // 96px
+  28: '7rem',       // 112px
+  32: '8rem',       // 128px
+  36: '9rem',       // 144px
+  40: '10rem',      // 160px
+  44: '11rem',      // 176px
+  48: '12rem',      // 192px
+  52: '13rem',      // 208px
+  56: '14rem',      // 224px
+  60: '15rem',      // 240px
+  64: '16rem',      // 256px
+  72: '18rem',      // 288px
+  80: '20rem',      // 320px
+  96: '24rem',      // 384px
+};
+
+export const borderRadius = {
+  none: '0',
+  sm: '0.125rem',   // 2px
+  DEFAULT: '0.25rem', // 4px
+  md: '0.375rem',   // 6px
+  lg: '0.5rem',     // 8px
+  xl: '0.75rem',    // 12px
+  '2xl': '1rem',    // 16px
+  '3xl': '1.5rem',  // 24px
+  full: '9999px',
+};
+
+export const shadows = {
+  none: 'none',
+  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+  '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+  inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+  primary: `0 10px 40px -10px ${colors.primary[500]}40`,
+  accent: `0 10px 40px -10px ${colors.accent[500]}40`,
+};
+
+export const transitions = {
+  all: 'all 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+  colors: 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), fill 150ms cubic-bezier(0.4, 0, 0.2, 1), stroke 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+  opacity: 'opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+  shadow: 'box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+  transform: 'transform 150ms cubic-bezier(0.4, 0, 0.2, 1)',
+};
+>>>>>>> Stashed changes
 
 export const breakpoints = {
   sm: '640px',
@@ -234,6 +431,7 @@ export const breakpoints = {
   lg: '1024px',
   xl: '1280px',
   '2xl': '1536px',
+<<<<<<< Updated upstream
 } as const;
 
 // =================================================================
@@ -421,3 +619,105 @@ export const designSystem = {
 } as const;
 
 export default designSystem;
+=======
+};
+
+// Semantic token exports for easier use
+export const theme = {
+  colors,
+  typography,
+  spacing,
+  borderRadius,
+  shadows,
+  transitions,
+  breakpoints,
+};
+
+// CSS-in-JS helper utilities
+export const utils = {
+  // Convert pixel values to rem
+  pxToRem: (px: number) => `${px / 16}rem`,
+  
+  // Generate responsive styles
+  responsive: (styles: Record<string, any>) => {
+    const result: Record<string, any> = {};
+    Object.entries(styles).forEach(([breakpoint, style]) => {
+      if (breakpoint === 'DEFAULT') {
+        Object.assign(result, style);
+      } else {
+        result[`@media (min-width: ${breakpoints[breakpoint as keyof typeof breakpoints]})`] = style;
+      }
+    });
+    return result;
+  },
+  
+  // Truncate text with ellipsis
+  truncate: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
+  
+  // Center content
+  center: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  
+  // Absolute center
+  absoluteCenter: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+  },
+  
+  // Focus ring styles
+  focusRing: {
+    outline: 'none',
+    boxShadow: `0 0 0 3px ${colors.primary[500]}33`,
+  },
+};
+
+// Component-specific design tokens
+export const components = {
+  button: {
+    padding: {
+      sm: `${spacing[2]} ${spacing[3]}`,
+      md: `${spacing[3]} ${spacing[4]}`,
+      lg: `${spacing[4]} ${spacing[6]}`,
+    },
+    fontSize: {
+      sm: typography.fontSize.sm,
+      md: typography.fontSize.base,
+      lg: typography.fontSize.lg,
+    },
+  },
+  
+  input: {
+    padding: {
+      sm: `${spacing[2]} ${spacing[3]}`,
+      md: `${spacing[3]} ${spacing[4]}`,
+      lg: `${spacing[4]} ${spacing[5]}`,
+    },
+    borderColor: {
+      default: colors.neutral[300],
+      focus: colors.primary[500],
+      error: colors.error[500],
+    },
+  },
+  
+  card: {
+    padding: {
+      sm: spacing[4],
+      md: spacing[6],
+      lg: spacing[8],
+    },
+    borderRadius: borderRadius.xl,
+    shadow: shadows.md,
+  },
+};
+
+export default theme; 
+>>>>>>> Stashed changes
