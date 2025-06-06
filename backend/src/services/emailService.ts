@@ -181,7 +181,19 @@ class EmailService {
       console.log(`[EMAIL] Resumed sequence for lead ${leadId}`);
       
       // Find recipient and restart scheduling
-      // In production, this would fetch from database
+      const recipient = this.findRecipientByLeadId(leadId); // Hypothetical method to fetch recipient
+      if (!recipient) {
+        console.error(`[EMAIL] Recipient not found for lead ${leadId}`);
+        return;
+      }
+      
+      const now = new Date();
+      sequence.emails.forEach((email, index) => {
+        if (!email.sentAt) {
+          const delay = this.calculateEmailDelay(sequence.startedAt, index, now); // Calculate delay for scheduling
+          this.scheduleEmail(recipient, email.templateId, delay); // Hypothetical scheduling method
+        }
+      });
     }
   }
 }
