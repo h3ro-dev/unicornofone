@@ -9,6 +9,7 @@ const router = Router();
 // Lead capture endpoints
 router.post('/leads', validateRequest(leadSchema), leadController.createLead);
 router.get('/leads/:id', leadController.getLead);
+router.post('/leads/:id/send-conversion-email', leadController.sendConversionEmail);
 
 // Consultation booking endpoints
 router.post('/consultations', validateRequest(consultationSchema), consultationController.bookConsultation);
