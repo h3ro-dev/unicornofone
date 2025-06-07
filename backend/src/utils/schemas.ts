@@ -31,5 +31,19 @@ export const consultationSchema = z.object({
   message: z.string().optional()
 });
 
+export const cartAbandonmentSchema = z.object({
+  email: z.string().email('Invalid email address'),
+  firstName: z.string().min(1, 'First name is required'),
+  productId: z.string().min(1, 'Product ID is required'),
+  cartValue: z.number().positive('Cart value must be positive'),
+  abandonedAt: z.string().datetime().optional(),
+  metadata: z.object({
+    source: z.string().optional(),
+    referrer: z.string().optional(),
+    sessionId: z.string().optional()
+  }).optional()
+});
+
 export type Lead = z.infer<typeof leadSchema>;
 export type Consultation = z.infer<typeof consultationSchema>;
+export type CartAbandonment = z.infer<typeof cartAbandonmentSchema>;
