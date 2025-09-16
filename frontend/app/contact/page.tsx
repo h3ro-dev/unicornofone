@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Container, Heading, Text, Card, Button, Input } from '../../components/ui';
+import { notifyLead, utmFromLocation } from '../lib/notifyLead';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -49,6 +50,13 @@ export default function ContactPage() {
     if (validateForm()) {
       // Handle form submission
       console.log('Form submitted:', formData);
+      try {
+        const page_url = typeof window !== 'undefined' ? window.location.href : '';
+        const payload = { ...formData, page_url, ...utmFromLocation() };
+        notifyLead('contact', payload);
+      } catch (e) {
+        console.warn('notifyLead skipped', e);
+      }
       // You would typically send this to an API endpoint
       alert('Thank you for your message! We\'ll be in touch soon.');
       
