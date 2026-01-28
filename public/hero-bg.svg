@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <radialGradient id="glow1" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4169E1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4169E1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="70%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#8E44AD" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8E44AD" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="unicornGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4169E1" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#8E44AD" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#4169E1" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#0a0a0f"/>
+  
+  <!-- Gradient orbs -->
+  <ellipse cx="576" cy="432" rx="480" ry="480" fill="url(#glow1)"/>
+  <ellipse cx="1344" cy="648" rx="400" ry="400" fill="url(#glow2)"/>
+  
+  <!-- Abstract geometric unicorn silhouette -->
+  <g transform="translate(960,540) scale(1.5)" opacity="0.06">
+    <!-- Unicorn body - geometric triangles -->
+    <polygon points="0,-200 -80,-50 80,-50" fill="#4169E1" opacity="0.5"/>
+    <polygon points="-80,-50 -120,80 0,20" fill="#5a7fee" opacity="0.4"/>
+    <polygon points="80,-50 120,80 0,20" fill="#8E44AD" opacity="0.4"/>
+    <polygon points="-120,80 0,20 120,80 0,150" fill="#6e3489" opacity="0.3"/>
+    <!-- Horn -->
+    <polygon points="0,-200 -15,-280 15,-280" fill="#4169E1" opacity="0.6"/>
+    <polygon points="0,-280 -5,-340 5,-340" fill="#5a7fee" opacity="0.7"/>
+    <!-- Mane triangles -->
+    <polygon points="-30,-180 -80,-120 -40,-100" fill="#8E44AD" opacity="0.3"/>
+    <polygon points="-50,-140 -100,-80 -60,-60" fill="#a855c7" opacity="0.25"/>
+  </g>
+  
+  <!-- Constellation dots and lines -->
+  <g opacity="0.3" filter="url(#blur1)">
+    <circle cx="200" cy="150" r="2" fill="#4169E1"/>
+    <circle cx="350" cy="200" r="1.5" fill="#5a7fee"/>
+    <circle cx="500" cy="100" r="2" fill="#8E44AD"/>
+    <circle cx="1400" cy="180" r="1.5" fill="#4169E1"/>
+    <circle cx="1600" cy="250" r="2" fill="#8E44AD"/>
+    <circle cx="1700" cy="150" r="1.5" fill="#5a7fee"/>
+    <circle cx="300" cy="800" r="2" fill="#8E44AD"/>
+    <circle cx="450" cy="900" r="1.5" fill="#4169E1"/>
+    <circle cx="1500" cy="850" r="2" fill="#4169E1"/>
+    <circle cx="1650" cy="780" r="1.5" fill="#8E44AD"/>
+    
+    <line x1="200" y1="150" x2="350" y2="200" stroke="#4169E1" stroke-width="0.5" opacity="0.3"/>
+    <line x1="350" y1="200" x2="500" y2="100" stroke="#5a7fee" stroke-width="0.5" opacity="0.2"/>
+    <line x1="1400" y1="180" x2="1600" y2="250" stroke="#4169E1" stroke-width="0.5" opacity="0.3"/>
+    <line x1="1600" y1="250" x2="1700" y2="150" stroke="#8E44AD" stroke-width="0.5" opacity="0.2"/>
+    <line x1="300" y1="800" x2="450" y2="900" stroke="#8E44AD" stroke-width="0.5" opacity="0.2"/>
+    <line x1="1500" y1="850" x2="1650" y2="780" stroke="#4169E1" stroke-width="0.5" opacity="0.3"/>
+  </g>
+  
+  <!-- Scattered particles -->
+  <g opacity="0.4">
+    <circle cx="100" cy="300" r="1" fill="#4169E1"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="800" cy="150" r="1.5" fill="#8E44AD"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1200" cy="400" r="1" fill="#5a7fee"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="1800" cy="500" r="1.5" fill="#4169E1"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="400" cy="600" r="1" fill="#a855c7"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="1600" cy="700" r="1" fill="#4169E1"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
